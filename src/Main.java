@@ -34,11 +34,19 @@ public class Main {
         LocalTime time2 = LocalTime.of(cal.get(Calendar.HOUR), cal.get(Calendar.MINUTE));
         //timeClass tc = new timeClass();
 
-        int displayTime =  time1.compareTo(time2);
+        System.out.println("Hours : ");
+        int t3 = s.nextInt();
+        System.out.println("Minutes : ");
+        int t4 = s.nextInt();
 
-        if(displayTime==7){
+        LocalTime time3 = LocalTime.of(t3,t4);
+
+        int displayTime =  time1.compareTo(time2);
+        int displayTime2 = time1.compareTo(time3);
+
+        if(displayTime==7 || displayTime2 ==7){
             System.out.println("\nEntry denied");
-        } else if (displayTime<7) {
+        } else if (displayTime<7 || displayTime2<7) {
             System.out.println("\nEntry permitted");
         }else {
             System.out.println("\nEntry denied");
